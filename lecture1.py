@@ -1,7 +1,7 @@
 print("===============")
 
-# VSCode: CTRL + SHIFT + P 
 # install Python plugin from vsix
+# VSCode: CTRL + SHIFT + P 
 # Select interpreter
 # F2 + install refactoring plugin
 # F5 + install linter
