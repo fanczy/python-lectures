@@ -49,19 +49,19 @@ print(message[::-1]) # reversed string (whole string from start to end, with -1 
 # STRING FORMATING #
 ####################
 
-hello = message[:5]
+greeting = message[:5]
 name = "Person"
 
 print(message.upper()) # one of basic string functions - converts string to upper case
-print(hello + name) # string joining
-print(hello + ", " + name + "." * 3) # string multiplication
-print("{}, {}.".format(hello, name)) # basic string format operations
-print("{1}, {0}.".format(hello, name))
-print("{g} {n}".format(g = hello, n = name))
-print("{g} {g}".format(g = hello, n = name))
+print(greeting + name) # string joining
+print(greeting + ", " + name + "." * 3) # string multiplication
+print("{}, {}.".format(greeting, name)) # basic string format operations
+print("{1}, {0}.".format(greeting, name))
+print("{g} {n}!".format(g = greeting, n = name))
+print("{g} {g}!".format(g = greeting, n = name))
 
-print(f"{hello}, {name}.") # string interpolation
-print(f"{name}, {hello.lower()}")
+print(f"{greeting}, {name}.") # string interpolation
+print(f"{name}, {greeting.lower()}.")
 
 pi_approx = 355 / 113
 
@@ -77,29 +77,35 @@ print(message.__len__()) # same as above
 
 numbers = "zero one two three four".split()
 print(numbers)
+
 numbers_extension = [5, "six"] # list creation, can combine different types
 extended_numbers = numbers + numbers_extension # list concatenation
 print(extended_numbers)
+
 extended_numbers[5] = "five" # changing item in list
 extended_numbers.append("seven") # appending to end of list
 print(extended_numbers) 
+
 extended_numbers.pop() # popping last item from list
 print(extended_numbers)  
+
 zero = extended_numbers.pop(0) # popping item at index zero from list, pop() function returns popped item
 print(extended_numbers) 
 print(zero) # popped item
+
 numbers = [2,1,3]
 print(numbers)
+
 numbers.sort() # sorting list of items
 print(numbers)
+
 numbers.reverse() # reversing list, 
 print(numbers)
+
 letters = ["c", "a", "b"] # sorting works on characters as well as numbers
 letters.sort()
 print(letters) 
 
 # ! sort() function can't sort mixed type lists
-
-
 
 print("===============")
