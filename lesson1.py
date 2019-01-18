@@ -99,7 +99,7 @@ print(numbers)
 numbers.sort() # sorting list of items
 print(numbers)
 
-numbers.reverse() # reversing list, 
+numbers.reverse() # reversing list
 print(numbers)
 
 letters = ["c", "a", "b"] # sorting works on characters as well as numbers
