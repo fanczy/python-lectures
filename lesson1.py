@@ -3,76 +3,102 @@ print("===============")
 print("hello world")
 print("hello", "world")
 
+###################
+##### NUMBERS #####
+###################
 a = 5
 b = 2
 
 print(a + b)
 print(a - b)
 print(a * b)
-print(a / b)
-print(a // b)
-print(a ** b)
-print(a % b)
+print(a / b) # returns floating point number
+print(a // b) # floor division
+print(a % b) # modulo - division remainder
+print(a ** b) # power
+
+a = a + 1 # adding 1 to a
+print(a)
+a += 1
+print(a) # adding 1 to a, shortened
+
+###################
+##### STRINGS #####
+###################
 
 message = "Hello world"
 print(message)
-print("I'm alive")
-print('He said: "I''m alive"')
-print(message[0]) #strings are immutable
-print(message[-1])
-print(message[6:])
-print(message[:4]) # stop index excluded
-print(message[1:5])
-print(message[6::2])
-print(message[::-1])
+print("I'm alive") # combination of single/double quotation marks allows use of quotes without string termination
+print('He said: "I''m alive"') 
+print(message[0]) # first character  strings are immutable - cant change character on index
+print(message[-1]) # first character from end (last character)
+
+###################
+# STRING SLICING  #
+###################
+
+#[start-index-included, stop-index-ecluded, step]
+
+print(message[6:]) # slice from seventh character (index 6 included) to end
+print(message[:4]) # slice from start to fourth character (index 4 excluded)
+print(message[1:5]) # slice from second to fifth character
+print(message[6::2]) # every second character from seventh character to end
+print(message[::-1]) # reversed string (whole string from start to end, with -1 step)
+
+####################
+# STRING FORMATING #
+####################
 
 hello = message[:5]
 name = "Person"
 
-print(message.upper())
-print(hello + name)
-print(hello + ", " + name + "." * 3)
-print("{}, {}.".format(hello, name))
+print(message.upper()) # one of basic string functions - converts string to upper case
+print(hello + name) # string joining
+print(hello + ", " + name + "." * 3) # string multiplication
+print("{}, {}.".format(hello, name)) # basic string format operations
 print("{1}, {0}.".format(hello, name))
 print("{g} {n}".format(g = hello, n = name))
 print("{g} {g}".format(g = hello, n = name))
 
-print(f"{hello}, {name}.")
+print(f"{hello}, {name}.") # string interpolation
 print(f"{name}, {hello.lower()}")
 
 pi_approx = 355 / 113
 
-print(f"{pi_approx:1.6f}")
+print(f"{pi_approx:1.6f}") # floating number formating - 1 number before decimal point, 6 nubmers after decimal point
 
 
-print(len(message))
-print(message.__len__())
+print(len(message)) # returns string length
+print(message.__len__()) # same as above
+
+###################
+###### LISTS ######
+###################
 
 numbers = "zero one two three four".split()
 print(numbers)
-numbers_extension = [5, "six"]
-extended_numbers = numbers + numbers_extension
+numbers_extension = [5, "six"] # list creation, can combine different types
+extended_numbers = numbers + numbers_extension # list concatenation
 print(extended_numbers)
-extended_numbers = extended_numbers + ["seven", "eight"]
+extended_numbers[5] = "five" # changing item in list
+extended_numbers.append("seven") # appending to end of list
 print(extended_numbers) 
-extended_numbers += ["nine", "ten"]
-extended_numbers[5] = "five"
-extended_numbers.append("eleven")
-print(extended_numbers) 
-extended_numbers.pop()
+extended_numbers.pop() # popping last item from list
 print(extended_numbers)  
-zero = extended_numbers.pop(0)
+zero = extended_numbers.pop(0) # popping item at index zero from list, pop() function returns popped item
 print(extended_numbers) 
-print(zero)
+print(zero) # popped item
 numbers = [2,1,3]
 print(numbers)
-numbers.sort()
+numbers.sort() # sorting list of items
 print(numbers)
-numbers.reverse()
+numbers.reverse() # reversing list, 
 print(numbers)
-letters = ["c", "a", "b"]
+letters = ["c", "a", "b"] # sorting works on characters as well as numbers
 letters.sort()
-print(letters) # can't sort mixed list
+print(letters) 
+
+# ! sort() function can't sort mixed type lists
 
 
 
