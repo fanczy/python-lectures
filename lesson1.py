@@ -30,7 +30,7 @@ message = "Hello world"
 print(message)
 print("I'm alive") # combination of single/double quotation marks allows use of quotes without string termination
 print('He said: "I''m alive"') 
-print(message[0]) # first character  strings are immutable - cant change character on index
+print(message[0]) # first character  strings are immutable - can't change character on index
 print(message[-1]) # first character from end (last character)
 
 ###################
