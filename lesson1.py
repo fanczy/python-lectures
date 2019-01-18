@@ -1,9 +1,12 @@
 print("===============")
 
+print("hello world")
+print("hello", "world")
+
 a = 5
 b = 2
 
-print("addition", a + b)
+print(a + b)
 print(a - b)
 print(a * b)
 print(a / b)
