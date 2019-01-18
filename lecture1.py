@@ -28,7 +28,7 @@ print(a)
 a += 1
 print(a) # adding 1 to a, shortened
 
-print(4 * (2 + 3) ** 2) #parenthesis before power before multiplication/division before addition/substraction
+print(4 * (2 + 3) ** 2) # parenthesis before power before multiplication/division before addition/substraction
 
 ##### excercises #####
 # square root
