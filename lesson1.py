@@ -130,9 +130,11 @@ print(letters)
 # ! sort() function can't sort mixed type lists
 
 ##### excercises #####
-# sequence [5, 8, 1, 0, 3, 7, 4, 2, 6, 9] order from largest to smallest
-# get odd numbers
-# get even numbers bigger than five from largest to smallest
+# sequence [5, 8, 1, 0, 3, 7, 4, 2, 6, 9] 
+# print in order from largest to smallest
+# print odd numbers from smallest to largest
+# get even numbers bigger than four from largest to smallest
+# how to make all these excercises in least lines?
 ######################
 
 print("===============")
