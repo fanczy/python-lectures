@@ -1,5 +1,10 @@
 print("===============")
 
+# VSCode: CTRL + SHIFT + P 
+# Select interpreter
+# F2 + install refacrotring plugin
+# F5 + install linter
+
 print("hello world")
 print("hello", "world")
 
@@ -8,6 +13,7 @@ print("hello", "world")
 ###################
 a = 5
 b = 2
+
 
 print(a + b)
 print(a - b)
