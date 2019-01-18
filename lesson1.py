@@ -45,9 +45,9 @@ print(message[1:5]) # slice from second to fifth character
 print(message[6::2]) # every second character from seventh character to end
 print(message[::-1]) # reversed string (whole string from start to end, with -1 step)
 
-####################
-# STRING FORMATING #
-####################
+##############$######
+# STRING FORMATTING #
+###############$#####
 
 greeting = message[:5]
 name = "Person"
@@ -65,7 +65,7 @@ print(f"{name}, {greeting.lower()}.")
 
 pi_approx = 355 / 113
 
-print(f"{pi_approx:1.6f}") # floating number formating - 1 number before decimal point, 6 nubmers after decimal point
+print(f"{pi_approx:1.6f}") # floating number formatting - 1 number before decimal point, 6 nubmers after decimal point
 
 
 print(len(message)) # returns string length
