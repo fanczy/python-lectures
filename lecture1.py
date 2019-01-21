@@ -138,4 +138,62 @@ print(letters)
 # how to make all these excercises in least lines?
 ######################
 
+####################
+###### TUPLES ######
+####################
+
+vector = (1, 2, 1) # - immutable lists, if I need to be sure the data can't be changed
+print(vector[0])
+
+
+##### excercises #####
+# vector addition
+######################
+
+##################
+###### SETS ######
+##################
+
+fruits = {"apple", "pear"} # - every entry appears once, cant index in set
+print(fruits)
+
+fruits.add("orange")
+print(fruits)
+
+fruits.add("apple")
+print(fruits)
+
+repeated_values = [1, 2, 1, 3, 2, 1, 2, 2, 3]
+print(set(repeated_values))
+
+##### excercises #####
+# which letters were used in string "Popokatepetl"
+######################
+
+##########################
+###### DICTIONARIES ######
+##########################
+
 print("===============")
+
+prices = {
+    "apple": 1,
+    "mango": 2
+}
+print(prices)
+print(prices["apple"])
+
+prices["apple"] = {
+    "red": 1,
+    "green": 0.9
+}
+print(prices["apple"]["green"])
+
+print(prices.keys())
+print(prices.values())
+print(prices.items())
+
+
+
+
+
