@@ -201,8 +201,37 @@ to_be = True # must have capital T
 print(to_be)
 print(type(True))
 print(type("true"))
+
+##################################
+###### COMPARISON OPERATORS ######
+##################################
+
+print(2 == 2) # one = sign is value assignment therefore == is used for comparison
+print(1 != 2)
 print(1 > 2)
-print(2 == 2)
+print(1 <= 2)
+print(1 < 2 < 3)
+
+print(2 == 2.0)
+print(2 == "2")
+print("hello" != "hi")
+print("Hello" == "hello")
+print(["a","b"] == ["a", "b"])
+print(["a","b"] == ["b", "a"]) # same with tuples
+print({"a","b"} == {"b","a"}) # order doesn't matter
+print({"lock1":"key1", "lock2":"key2"} == {"lock2":"key2", "lock1":"key1"} )
+
+###############################
+###### LOGICAL OPERATORS ######
+###############################
+
+print(True and False)
+print(True or False)
+print(not True)
+print(1 > 2 and 2 < 5)
+print(to_be or not to_be)
+print(False and True or True) # and precedes or
+print(False and (True or True))
 
 
 ##### excercises #####
