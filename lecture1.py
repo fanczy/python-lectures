@@ -193,6 +193,14 @@ print(prices.keys())
 print(prices.values())
 print(prices.items())
 
+######################
+###### BOOLEANS ######
+######################
+
+tautology = True # must have capital T
+print(tautology)
+print(type(True))
+print(type("true"))
 
 
 
