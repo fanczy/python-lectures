@@ -197,11 +197,16 @@ print(prices.items())
 ###### BOOLEANS ######
 ######################
 
-tautology = True # must have capital T
-print(tautology)
+to_be = True # must have capital T
+print(to_be)
 print(type(True))
 print(type("true"))
+print(1 > 2)
+print(2 == 2)
 
 
-
+##### excercises #####
+# check if two vectors are the same length
+# check if words are anagrams
+######################
 
