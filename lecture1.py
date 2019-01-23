@@ -6,8 +6,30 @@ print("===============")
 # F2 + install refactoring plugin
 # F5 + install linter
 
+# why python?
+
+# fast learning curve
+# large community
+
+
+# easy to read
+# print("Hello world")
+#   vs. 
+# public class HelloWorld {
+#
+#    public static void main(String[] args) {
+#        System.out.println("Hello, World");
+#    }
+#}
+
+# demanded on market
+# modern
+# dynamic typing (convenient but slow and hard to maintain)
+
 print("hello world")
 print("hello", "world")
+
+# types: int, float, string, list, tup, set, dict, bool
 
 ###################
 ##### NUMBERS #####
