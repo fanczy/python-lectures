@@ -265,7 +265,7 @@ print(False and (True or True))
 # check if words are anagrams
 ######################
 
-#vector1 = (1, 2)
+# vector1 = (1, 2)
 # vector2 = (2, 2)
 
 # have_same_length = #homework
