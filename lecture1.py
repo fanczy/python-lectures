@@ -65,7 +65,7 @@ print(4 * (2 + 3) ** 2) # parenthesis before power before multiplication/divisio
 message = "Hello world"
 print(message)
 print("I'm alive") # combination of single/double quotation marks allows use of quotes without string termination
-print('He said: "I''m alive"')  # I can put quotation mark twice in a row to prevent string termination
+print('He said: "I\'m alive"')  # I can put backslash to "escape" the character so the quote mark doesn't terminate the string
 print('Hello\nHello')
 print(message[0]) # first character (strings are immutable - can't change character on index)
 print(message[-1]) # first character from end (last character)
@@ -260,8 +260,19 @@ print(False and True or True) # and precedes or
 print(False and (True or True))
 
 
-##### excercises #####
+##### HOMEWORK #####
 # check if two vectors are the same length
 # check if words are anagrams
 ######################
 
+#vector1 = (1, 2)
+# vector2 = (2, 2)
+
+# have_same_length = #homework
+# print(have_same_length)
+
+# word1 = "ward"
+# word2 = "draw"
+
+# are_anagrams = #homework
+# print(are_anagrams)
