@@ -95,7 +95,11 @@ print(message.__len__()) # same as above
 ###### LISTS ######
 ###################
 
-numbers = "zero one two three four".split()
+numbers = "zero one two three four".split() # splits by space
+print(numbers)
+numbers = ", ".join(numbers) # joins with ", " between values
+print(numbers)
+numbers = numbers.split(", ") # splits by ", "
 print(numbers)
 
 numbers_extension = [5, "six"] # list creation, can combine different types
