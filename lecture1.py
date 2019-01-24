@@ -139,13 +139,13 @@ zero = extended_numbers.pop(0) # popping item at index zero from list, pop() fun
 print(extended_numbers) 
 print(zero) # popped item
 
-extended_numbers.reverse() # reverses list
+extended_numbers.reverse() # reverses list !!! Avoid using in-place modifying functions as they can be source of problems. !!!
 print(extended_numbers)
 
 numbers = [2,1,3]
 print(numbers)
 
-numbers.sort() # sorting list of items
+numbers.sort() # sorting list of items !!! Avoid using in-place modifying functions as they can be source of problems. !!!
 print(numbers)
 
 print(numbers)
