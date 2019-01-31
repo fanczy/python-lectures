@@ -5,6 +5,8 @@ print("===============")
 # check if words are anagrams
 ######################
 
+# ADDITION TO LAST LESSON: dictionary.get("nonexistent key", "defaultValue")
+
 ######################
 ##### CONDITIONS #####
 ######################
@@ -191,7 +193,16 @@ else:
 ######################
 
 
-
-
+##### HOMEWORK #####
+# 100 times generate random numbers (0 - 10) sequence until you get 7
+# print shortest sequence
+# print longest sequence
+# print sequence with the longest same number combo
+# print which number was the combo
+# print combo length
+# print begining index of the combo in generated sequence
+# print in which generation the longest combo appeared
+# print which number appeared the most and how many times throughout all generations
+# ######################
 
 print("===============")
