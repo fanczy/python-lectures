@@ -1,10 +1,4 @@
 print("===============")
-
-##### LAST HOMEWORK #####
-# check if two vectors are the same length
-# check if words are anagrams
-######################
-
 # ADDITION TO LAST LESSON: dictionary.get("nonexistent key", "defaultValue")
 
 ######################
@@ -22,14 +16,6 @@ else: # else nested code is executed if the condition is false
     print("It's false")
 
 
-wordA = "ward"
-wordB = "draw"
-
-if set(wordA) == set(wordB):
-    print(f"Words {wordA} and {wordB} are anagrams")
-else:
-    print(f"Words {wordA} and {wordB} are not anagrams")
-
 
 a = 5
 b = 6
@@ -42,12 +28,14 @@ else: # happens if all predecessing conditions are false
     print(f"{a} is smaller than {b}")
 
 
+word = "hello"
+
 containment_phrase = "contains"
 
-if "b" not in wordA:
+if "b" not in word:
     containment_phrase = "does not contain"
 
-print(f"Word '{wordA}' {containment_phrase} letter 'b'" )
+print(f"Word '{word}' {containment_phrase} letter 'b'" )
 
 ##### excercises #####
 # two variables: a, b write a code that will put bigger value to a and lower to b
