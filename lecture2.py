@@ -134,33 +134,6 @@ for index, letter in enumerate(word): # enumerates items with index
 
 ##### excercises #####
 # print 7!
-# menu = {
-#     "soups": {
-#         "tomato soup": 25,
-#         "chicken soup": 20
-#     },
-#     "main courses": {
-#         "spaghetti bolognese": 80,
-#         "pineapple pizza": 420
-#     },
-#     "deserts": {
-#         "ice cream": 30,
-#         "brownies": 30 
-#     },
-#     "drinks": {
-#         "beer": 5,
-#         "water": 100
-#     }
-# } 
-# print in human readable form
-# ===== soups =====
-# tomato soup .... 25 BTC
-# chicken soup ..... 20 BTC
-# ===== main courses =====
-# spaghetti bolognese ..... 80 BTC
-# .
-# .
-# .
 ######################
 
 counter = 0
@@ -200,7 +173,40 @@ numbers = [num * multiplicator for num in [1, 2, 3] for multiplicator in [1, 10,
 print(numbers)
 
 ##### HOMEWORK #####
-# 100 times generate random numbers (0 - 10) sequence until you get 7
+######### 1 ########
+#
+# menu = {
+#     "soups": {
+#         "tomato soup": 25,
+#         "chicken soup": 20
+#     },
+#     "main courses": {
+#         "spaghetti bolognese": 80,
+#         "pineapple pizza": 420
+#     },
+#     "deserts": {
+#         "ice cream": 30,
+#         "brownies": 30 
+#     },
+#     "drinks": {
+#         "beer": 5,
+#         "water": 100
+#     }
+# } 
+#
+#
+# print in human readable form:
+# ===== soups =====
+# tomato soup .... 25 BTC
+# chicken soup ..... 20 BTC
+# ===== main courses =====
+# spaghetti bolognese ..... 80 BTC
+# .
+# .
+# .
+#
+######### 2 ########
+# Generate 100 sequences of random numbers (0 - 10) ending with 7.
 # print shortest sequence
 # print longest sequence
 # print sequence with the longest same number combo
