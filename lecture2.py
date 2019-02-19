@@ -180,6 +180,24 @@ else:
 # print random numbers from 0 to 10 until it's 7, then print how many tries did it take to hit 7 | from random import randint <- imports random number generator | randint(0,10)
 ######################
 
+##############################
+##### LIST COMPREHENSION #####
+##############################
+
+numbers = [ num for num in range(0,10) ]
+print(numbers)
+
+numbers = [ num ** 2 for num in [2, 4, 6, 8]]
+print(numbers)
+
+odd_numbers = [ num for num in range(0,10) if num % 2 != 0 ]
+print(odd_numbers)
+
+numbers = [ num if num % 2 == 0 else "odd" for num in range(0,10) ] # UNREADABLE, avoid using this.
+print(numbers)
+
+numbers = [num * multiplicator for num in [1, 2, 3] for multiplicator in [1, 10, 100]] # UNREADABLE
+print(numbers)
 
 ##### HOMEWORK #####
 # 100 times generate random numbers (0 - 10) sequence until you get 7
