@@ -16,8 +16,8 @@ greet()
 
 def give_answer(question):
     return 42 # Functions can return value that can be used later or stored in variable.
-
-answer = give_answer("Ultimate question of life, the universe, and everything")
+ 
+answer = give_answer("Ultimate question of life, the universe, and everything.")
 
 print(answer)
 
