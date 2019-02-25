@@ -29,6 +29,19 @@ def root(number, n):
 print(root(9,2)) 
 print(root(-9,2)) # Python is so complex, yet so simple.
 
+def multigreet(*names): # Puts all arguments into tuple.
+    for name in names:
+        greet(name)
+
+multigreet("Hynek", "Vilem", "Jarmila")
+
+def keyword_args(**kwargs): # Puts arguments with keywords into dictionary.
+    print(kwargs)
+
+# def multigreet_with_greeting(*names, **greetings):
+
+    
+
 ##### excercises #####
 # Write a function that determines if number is dividable by another number.
 # Write a function that prints if number is dividable by another number as a sentencte example: print_dividable(4,2) prints "Number 4 is dividable by number 2."
