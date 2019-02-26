@@ -56,6 +56,18 @@ def multigreet_with_greeting(*names, **greetings):
 
 multigreet_with_greeting("Hynek", "Vilem", "Jarmila", Hynek="Hey", Jarmila="How are you")
 
+number = 1
+
+def scope_test():
+    number = 2
+    def enclosed_scope_test():
+        number = 3
+        print(number)
+    enclosed_scope_test()
+
+scope_test()
+
+
 ##### excercise #####
 # Write a function gather_fruits, that gets n strings as fruits, and then n keyword aguments of containers with list of fruits that goes into them
 # the function will write which fruit goes to which container, if there is no container for the fruit, then it stays on floor
@@ -72,16 +84,16 @@ multigreet_with_greeting("Hynek", "Vilem", "Jarmila", Hynek="Hey", Jarmila="How 
 ###### DOCUMENTATION ######
 ###########################
 
-help(print)
+# help(print)
 
-def doc_test(echo):
-    '''
-    This text will appear in help(doc_test)\n
-    INPUT:
-        echo - value to be returned   
-    OUTPUT:
-        returns echo
-    '''
-    return echo
+# def doc_test(echo):
+#     '''
+#     This text will appear in help(doc_test)\n
+#     INPUT:
+#         echo - value to be returned   
+#     OUTPUT:
+#         returns echo
+#     '''
+#     return echo
 
-help(doc_test)
+# help(doc_test)
