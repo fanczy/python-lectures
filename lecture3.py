@@ -92,20 +92,85 @@ global_variable_change()
 print(number)
 
 
-###########################
-###### DOCUMENTATION ######
-###########################
+def greet_input_name():
+    name = input("Enter name: ")
+    greet(name)
 
-# help(print)
+# greet_input_name()
 
-# def doc_test(echo):
-#     '''
-#     This text will appear in help(doc_test)\n
-#     INPUT:
-#         echo - value to be returned   
-#     OUTPUT:
-#         returns echo
-#     '''
-#     return echo
+def start_super_program_9001():
+    print("Welcome to Super Program 9001.\nEnter '?' for help.")
+    command = None
+    while(command != "exit"):
+        command = input("Enter command: ")
+        process_command(command)
 
-# help(doc_test)
+def process_command(command):
+    if(command == "?"):
+        super_program_9001_help()
+    elif(command == "greet"):
+        greet_input_name()
+    elif(command == "exit"):
+        print("Good bye.")
+    else:
+        print(f"Error: unknown command '{command}'.")
+
+def super_program_9001_help():
+    print(f""" 
+        AVAILABLE COMMANDS:
+        ? - Prints help.
+        greet - Greets you.
+        exit - Closes Super Program 9001.
+    """)
+
+start_super_program_9001()
+
+
+##########################
+##### DOCUMENTATION ######
+##########################
+
+help(print)
+
+def doc_test(echo):
+    '''
+    This text will appear in help(doc_test)\n
+    INPUT:
+        echo - value to be returned   
+    OUTPUT:
+        returns echo
+    '''
+    return echo
+
+help(doc_test)
+
+##### HOMEWORK #####
+# Basic calculator
+# Calculator will ask you to input first number until it's a valid number, 'exit', or 'clear' command.
+# Then it will ask you to input valid operation ('+','-','*','/','exit','clear').
+# Then it will ask you to input another valid number (or 'exit', 'clear' commands).
+# Calculator will print the calculation with result.
+# Then it will ask you to input another operation and the last result will be used as first number in operation.
+# This will process will repeat until 'exit' is input (as a number or as a command).
+# Inputting 'exit' as a number, or operation ends the calculator.
+# Inputting 'clear' as a number, or operation will reset the calculator and let you input first number.
+# This calculator will be really basic, so it will not work with parenthesis and operator precedence.
+##### EXAMPLE #####
+# Enter number: 1
+# Choose operation: +
+# Enter number: 4
+# 1 + 4 = 5
+# Enter operation: blabla
+# Unknown operation
+# Enter operation: *
+# Enter number: qwejklhrkqjlh
+# Invalid number
+# Enter number: 4
+# 5 * 4 = 20
+# Enter operation: clear
+# Enter number: -7
+# Enter operation: -
+# Enter number: -49
+# -7 - -49 = 42
+# Enter operation: /
+# Enter number: exit
