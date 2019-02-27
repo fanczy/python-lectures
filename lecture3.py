@@ -47,7 +47,7 @@ def print_expensive_fruits(**priced_fruits): # Puts arguments with keywords into
 
 print_expensive_fruits(apple = 1, melon = 5, pomelo = 7, orange = 2)
 
-def multigreet_with_greeting(*names, **greetings):
+def multigreet_with_greeting(*names, **greetings): # You can combine 
     for name in names:
         if(name in greetings):
             greet_with_greeting(name, greetings[name])
@@ -55,18 +55,6 @@ def multigreet_with_greeting(*names, **greetings):
             greet(name)
 
 multigreet_with_greeting("Hynek", "Vilem", "Jarmila", Hynek="Hey", Jarmila="How are you")
-
-number = 1
-
-def scope_test():
-    number = 2
-    def enclosed_scope_test():
-        number = 3
-        print(number)
-    enclosed_scope_test()
-
-scope_test()
-
 
 ##### excercise #####
 # Write a function gather_fruits, that gets n strings as fruits, and then n keyword aguments of containers with list of fruits that goes into them
@@ -78,6 +66,30 @@ scope_test()
 # pomelo stays on ground
 # ######################
 
+number = 1
+
+def scope_test():
+    number = 2
+    def enclosed_scope_test():
+        number = 3 # If you use multiple variables with same name, the closest one will be used, first in the scope, then enclosing function and last in global space.
+        print(number)
+    enclosed_scope_test()
+
+scope_test()
+
+def scope_variable_change(number):
+    number = 5 # If you change value of variable passed as argument, the original value will not be changed.
+    print(number)
+
+scope_variable_change(number)
+print(number)
+
+def global_variable_change():
+    global number # AVOID overwrithing global variables, unless it's necesarry. It's generally bad practice and can lead to many mistakes.
+    number = 7
+
+global_variable_change()
+print(number)
 
 
 ###########################
