@@ -143,8 +143,12 @@ def doc_test(echo):
     return echo
 
 help(doc_test)
+  
+
 
 ##### HOMEWORK #####
+
+
 # Basic calculator
 # Calculator will ask you to input first number until it's a valid number, 'exit', or 'clear' command.
 # Then it will ask you to input valid operation ('+','-','*','/','exit','clear').
@@ -155,6 +159,15 @@ help(doc_test)
 # Inputting 'exit' as a number, or operation ends the calculator.
 # Inputting 'clear' as a number, or operation will reset the calculator and let you input first number.
 # This calculator will be really basic, so it will not work with parenthesis and operator precedence.
+# Function to check if string is a number:
+#
+# def is_number(string):
+#     try:
+#         float(string)
+#         return True
+#     except ValueError:
+#         return False    
+#
 ##### EXAMPLE #####
 # Enter number: 1
 # Choose operation: +
