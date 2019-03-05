@@ -38,9 +38,9 @@
 
 # Same as above but with OR instead of AND
 
-# OR function and Multixor
+# XOR function
 
-# XOR table:
+# XOR truth table:
 # A B | Y
 # ----|---
 # 0 0 | 0
