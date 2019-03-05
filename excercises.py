@@ -35,3 +35,15 @@
 
 # Same as above but with OR instead of AND
 
+# Bonus: XOR function and Multixor
+
+# XOR table:
+# A B | Y
+# ----|---
+# 0 0 | 0
+# 0 1 | 1
+# 1 0 | 1
+# 1 1 | 0
+
+
+
