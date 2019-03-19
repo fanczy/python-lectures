@@ -116,4 +116,22 @@ print(bike.brand)
 car = superFactory.manufacture_car()
 print(car.brand)
 
+class Rock():
+    broken_wheels = 0
+    def break_wheel(self, transport):
+        if(not hasattr(transport, "wheels")):
+            return
+        
+        for wheel in transport.wheels:
+            if(not wheel.broken):
+                wheel.broken = True
+                self.broken_wheels += 1
+                break
 
+rock = Rock()
+
+rock.break_wheel(car)
+print(rock.broken_wheels)
+
+for broken in map(lambda wheel : wheel.broken, car.wheels):
+    print(broken)
