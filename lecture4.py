@@ -34,9 +34,8 @@ betterGreeter.greeting = "Yo"
 betterGreeter.greet()
 
 class SophisticatedGreeter():
-    defaultName = "Person"
-
     def __init__(self, greeting):
+        self.defaultName = "Person"
         self.greeting = greeting
         self.greet()
 
@@ -64,74 +63,93 @@ superGreeter.greet("Friend")
 #######################
 
 class Wheel():
-    broken = False
+    def __init__(self):
+        self.broken = False
 
-class Motor():
-    broken = False
-    needs_oil = False
+
+class Engine():
+    def __init__(self):
+        self.needs_oil = True
 
 class Bike():
-    wheels = []
+    def __init__(self):
+        self.wheels = []
+
+    def can_ride(self):
+        if(len(self.wheels) < 1):
+            return False
+
+        for wheel in self.wheels:
+            if wheel.broken:
+                return False
+        return True
 
 class Car():
-    wheels = []
-    motor = None
+    def __init__(self):
+        self.wheels = []
+        self.engine = None
 
-class TransportFactory():
-    def __init__(self, name):
-        self.name = name
+    def can_ride(self):
+        if self.engine is None:
+            return False
 
-    def manufacture_bike(self):
-        new_bike = Bike()
-        self.add_wheels(new_bike, 2)
-        self.__add_brand(new_bike)
-        return new_bike
-    
-    def manufacture_car(self):
-        new_car = Car()
-        self.add_wheels(new_car, 4)
-        self.add_motor(new_car)
-        self.__add_brand(new_car)
-        return new_car
-    
-    def add_wheels(self, transport, number_of_wheels):
-        if(not hasattr(transport, "wheels")):
-            return
+        if not isinstance(self.engine, Engine):
+            return False
 
-        for _ in range(number_of_wheels):
-            transport.wheels.append(Wheel())
+        if self.engine.needs_oil:
+            return False
 
-    def add_motor(self, transport):
-        if(not hasattr(transport, "motor")):
-            transport.motor = Motor()
-
-    def __add_brand(self, transport): # private method can't be accessed outside of class
-        transport.brand = self.name
-    
-superFactory = TransportFactory("SuperFactory")
-
-bike = superFactory.manufacture_bike()
-print(bike.brand)
-
-car = superFactory.manufacture_car()
-print(car.brand)
+        return True
 
 class Rock():
     broken_wheels = 0
     def break_wheel(self, transport):
-        if(not hasattr(transport, "wheels")):
-            return
-        
         for wheel in transport.wheels:
-            if(not wheel.broken):
+            if not wheel.broken:
                 wheel.broken = True
                 self.broken_wheels += 1
                 break
 
+class VehicleFactory():
+    def manufacture_bike(self):
+        new_bike = Bike()
+        self.add_wheels(new_bike, 2)
+        return new_bike
+
+    def manufacture_car(self):
+        new_car = Car()
+        self.add_wheels(new_car, 4)
+        self.add_engine(new_car)
+        return new_car
+
+    def add_engine(self, vehicle):
+        if vehicle.engine is None:
+            vehicle.engine = Engine()
+
+    def add_wheels(self, vehicle, number_of_wheels):
+        if not hasattr(vehicle, "wheels"):
+            return
+        if not type(vehicle.wheels) is type([]):
+            return
+
+        for _ in range(number_of_wheels):
+            vehicle.wheels.append(Wheel())
+
+factory = VehicleFactory()
+bike = factory.manufacture_bike()
 rock = Rock()
+print(bike.can_ride())
+rock.break_wheel(bike)
+print(bike.can_ride())
+car = factory.manufacture_car()
+print(car.can_ride())
 
-rock.break_wheel(car)
-print(rock.broken_wheels)
 
-for broken in map(lambda wheel : wheel.broken, car.wheels):
-    print(broken)
+class VehicleService():
+    def fix_vehicle(self, vehicle):
+        pass
+
+service = VehicleService()
+
+service.fix_vehicle(bike)
+bike.can_ride()
