@@ -2,12 +2,13 @@
 ###### CLASSES ######
 #####################
 
-class SimpleGreeter(): # Class is definition of object's behavior and properties. There can be multiple instances of objects of the same class.
+class SimpleGreeter(): # Class is definition of object's behavior and properties.
     def __init__(self): # Every method of a class gets instance that it's called on as a first argument.
         print("Hello, Person.")
     
 
 simple_greeter = SimpleGreeter() # This calls constructor (__init__ method) and returns new instance object of a class.
+another_simple_greeter = SimpleGreeter() # There can be multiple instances of objects of the same class.
 
 class Greeter():
     def __init__(self, greeting): # Constructor of this class gets one argument.
