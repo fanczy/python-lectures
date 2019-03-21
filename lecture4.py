@@ -37,24 +37,16 @@ class SophisticatedGreeter():
     def __init__(self, greeting):
         self.defaultName = "Person"
         self.greeting = greeting
-        self.greet()
 
-    def greet(self):
-        print(f"{self.greeting}, {self.defaultName}.")
+    def greet(self, name = None):
+        if(name is None):
+            name = self.defaultName
+        print(f"{self.greeting}, {name}.")
 
 
 sophisticatedGreeter = SophisticatedGreeter("Hi there")
-
-class SuperGreeter():
-    def __init__(self, greeting):
-        self.greeting = greeting
-
-    def greet(self, name):
-        print(f"{self.greeting}, {name}.")
-
-superGreeter = SuperGreeter("Hello")
-
-superGreeter.greet("Friend")
+sophisticatedGreeter.greet()
+sophisticatedGreeter.greet("Friend")
 
 ##### excercise #####
 # Upgrade SuperGreeter into UberGreeter, UberGreeter has attribute defaultName.
