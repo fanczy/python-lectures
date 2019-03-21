@@ -144,12 +144,19 @@ print(bike.can_ride())
 car = factory.manufacture_car()
 print(car.can_ride())
 
+##### HOMEWORK #####
+# Create VehicleService class
+# This class has a method fix_vehicle that takes vehicle as a argument
+# Method fix_vehicle repairs all broken wheels on vehicle, if it has any and refils oil into vehicle's engine if it has any.
+####################
 
 class VehicleService():
     def fix_vehicle(self, vehicle):
-        pass
+        print("This method fixes any vehicle.")
 
 service = VehicleService()
 
+service.fix_vehicle(car)
+print(car.can_ride())
 service.fix_vehicle(bike)
-bike.can_ride()
+print(bike.can_ride())
