@@ -109,18 +109,23 @@ class VehicleFactory():
         self.add_engine(new_car)
         return new_car
 
-    def add_engine(self, vehicle):
-        if vehicle.engine is None:
-            vehicle.engine = Engine()
-
     def add_wheels(self, vehicle, number_of_wheels):
-        if not hasattr(vehicle, "wheels"):
+        if not hasattr(vehicle, "wheels"): # Checks if object vehicle has attribute wheels.
             return
         if not type(vehicle.wheels) is type([]):
-            return
+            vehicle.wheels = []
 
         for _ in range(number_of_wheels):
             vehicle.wheels.append(Wheel())
+
+
+    def add_engine(self, vehicle):
+        if not hasattr(vehicle, "engine"):
+            return
+
+        if vehicle.engine is None or not isinstance(vehicle.engine, Engine):
+            vehicle.engine = Engine()
+
 
 factory = VehicleFactory()
 bike = factory.manufacture_bike()
