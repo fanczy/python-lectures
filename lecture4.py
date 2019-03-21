@@ -2,57 +2,51 @@
 ###### CLASSES ######
 #####################
 
-class SimpleGreeter():
-    def __init__(self):
+class SimpleGreeter(): # Class is definition of object's behavior and properties. There can be multiple instances of objects of the same class.
+    def __init__(self): # Every method of a class gets instance that it's called on as a first argument.
         print("Hello, Person.")
     
 
-simple_greeter = SimpleGreeter()
+simple_greeter = SimpleGreeter() # This calls constructor (__init__ method) and returns new instance object of a class.
 
 class Greeter():
-    def __init__(self, greeting):
-        self.greeting = greeting
+    def __init__(self, greeting): # Constructor of this class gets one argument.
+        self.greeting = greeting  # You can change attributes of instance throught the self argument.
         print(f"{greeting}, Person.")
 
 
-greeter1 = Greeter("What's up")
-print(greeter1.greeting)
+greeter1 = Greeter("What's up") # Creates instance of Greeter class with "What's up" as constructor argument. 
+print(greeter1.greeting) # You can access objects attributes throught dot notation.
 
-greeter2 = Greeter("Hey there")
-print(greeter2.greeting)
+greeter2 = Greeter("Hey there") # Creates another instance of the same class with different constructor argument.
+print(greeter2.greeting) # Here you can see this instance has different greeting attribute, which was set in constructor.
 
 class BetterGreeter():
     def __init__(self, greeting):
         self.greeting = greeting
 
-    def greet(self):
-        print(f"{self.greeting}, Person.")
+    def greet(self): # Class methods get the instance as first argument without passing them in a call.
+        print(f"{self.greeting}, Person.") # self.greeting is the attribute that was set in the constructor.
 
 betterGreeter = BetterGreeter("Hey")
-betterGreeter.greet()
-betterGreeter.greeting = "Yo"
-betterGreeter.greet()
+betterGreeter.greet() 
+betterGreeter.greeting = "Yo" # We can change objects attributes through dot notation.
+betterGreeter.greet() # Here you can see, this instances greet() method will use the changed greeting.
 
 class SophisticatedGreeter():
     def __init__(self, greeting):
         self.defaultName = "Person"
         self.greeting = greeting
 
-    def greet(self, name = None):
+    def greet(self, name = None): # We can assign default value to object argument so it becomes optional.
         if(name is None):
-            name = self.defaultName
+            name = self.defaultName  # If the argument wasn't passed in call, we'll use defaultName attibute.
         print(f"{self.greeting}, {name}.")
 
 
 sophisticatedGreeter = SophisticatedGreeter("Hi there")
-sophisticatedGreeter.greet()
-sophisticatedGreeter.greet("Friend")
-
-##### excercise #####
-# Upgrade SuperGreeter into UberGreeter, UberGreeter has attribute defaultName.
-# greet method has one optional argument name
-# if greet is called without a name, it will use defaultName property.
-#######################
+sophisticatedGreeter.greet() # Greet with defaultName
+sophisticatedGreeter.greet("Friend") # Greet passed name
 
 class Wheel():
     def __init__(self):
