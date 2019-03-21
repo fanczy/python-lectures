@@ -79,7 +79,7 @@ class Car():
         if self.engine is None:
             return False
 
-        if not isinstance(self.engine, Engine):
+        if not isinstance(self.engine, Engine): # Checks if the engine attribute is instance of Engine class so we can safely use class methods.
             return False
 
         if self.engine.needs_oil:
